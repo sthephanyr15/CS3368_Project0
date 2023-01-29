@@ -30,6 +30,16 @@ def shopSmart(orderList, fruitShops):
         fruitShops: List of FruitShops
     """
     "*** TTU CS 3368 YOUR CODE HERE ***"
+    cheapestTotal= float('inf')
+    cheapestshop=None
+
+
+    for currentShop in fruitShops:
+        total=currentShop.getPriceOfOrder(orderList)
+        if total < cheapestTotal:
+            cheapestTotal=total
+            cheapestshop=currentShop
+    return cheapestshop
     return None
 
 
